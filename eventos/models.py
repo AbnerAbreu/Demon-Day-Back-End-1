@@ -10,11 +10,7 @@ class Eventos(models.Model):
     data = models.CharField(max_length=255)
     hora = models.CharField(max_length=255)
     participantes = models.CharField(max_length=255)
-    organizador = models.ForeignKey(
-        Colaborador,
-        on_delete=models.SET_NULL,
-        null=True
-    )
+    organizador = models.CharField(max_length=255)
 
     def __str__(self):
         return self.nome
